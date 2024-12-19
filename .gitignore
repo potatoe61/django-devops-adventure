@@ -1,0 +1,5 @@
+# Project exclude paths
+/Lib/
+/nginx-1.27.3/
+/Scripts/
+/testapi/
