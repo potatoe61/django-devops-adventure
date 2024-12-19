@@ -14,14 +14,22 @@ cmd /k
 Через powershell создаем сертификат и через openssl дробим его на серт, ключ и чейн. Их указываем в нашем конфиге NGINX:
 
 ssl_protocols TLSv1.2 TLSv1.3;
+
 ssl_ciphers HIGH:!aNULL:!MD5;
+
 ssl_prefer_server_ciphers on;
+
 ssl_session_cache shared:SSL:1m;
+
 ssl_session_timeout  5m;
 
+
 ssl_certificate "C:/nginx-1.27.3/nginx.crt";
+
 ssl_certificate_key "C:/nginx-1.27.3/nginx.key";
+
 ssl_trusted_certificate "C:/nginx-1.27.3/nginx.chain.crt";
+
 
 Дальше добавляем алиас для статического контента (Одного надеюсь хватит - работает же:))
 
