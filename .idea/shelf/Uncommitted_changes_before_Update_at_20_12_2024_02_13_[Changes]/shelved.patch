@@ -1,0 +1,23 @@
+Index: LAB1/readme.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Начинаем развертку джанго сервера:\r\n\r\ncall C:\\api\\.venv\\Scripts\\activate.bat - активируем венву\r\npause\r\nwaitress-serve --listen=127.0.0.1:8001 testapi.wsgi:application - используем вейтресс вместо стандартного runserver и указываем эндпойнт куда будет все перекидывать с NGINX\r\npause\r\ncmd /k\r\n\r\nПроверям доступность эндпоинта по HTTP.\r\n![Проверка доступности.png](%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D0%B8.png)\r\n\r\nПереходим к настройкам NGINX:\r\nДля начала заказываем себе сертификаты, думаю для лабы сойдут и самоподписота. Сертбот на винде сейчас не желает даже давать дистрибутив для скачки.\r\nЧерез powershell создаем сертификат и через openssl дробим его на серт, ключ и чейн. Их указываем в нашем конфиге NGINX:\r\n\r\nssl_protocols TLSv1.2 TLSv1.3;\r\nssl_ciphers HIGH:!aNULL:!MD5;\r\nssl_prefer_server_ciphers on;\r\nssl_session_cache shared:SSL:1m;\r\nssl_session_timeout  5m;\r\n\r\nssl_certificate \"C:/nginx-1.27.3/nginx.crt\";\r\nssl_certificate_key \"C:/nginx-1.27.3/nginx.key\";\r\nssl_trusted_certificate \"C:/nginx-1.27.3/nginx.chain.crt\";\r\n\r\nДальше добавляем алиас для статического контента (Одного надеюсь хватит - работает же:))\r\n\r\nlocation /static/ {\r\nalias C:\\api\\.venv\\testapi\\static;\r\n}\r\n\r\nЗатем принудительную переадресацию с HTTP:\r\n\r\nserver {\r\n        listen 8080;\r\n        server_name localhost;\r\n        return 301 https://$host$request_uri;\r\n    }\r\n\r\nДобавляем второй сервер блок для обработки второго \"доменного имени\" на одном сервере (в первом будет локалхост, на втором айпишник локальной сети):\r\n\r\nserver {\r\nlisten 443 ssl;\r\nserver_name 192.168.0.138;\r\n\r\n        ssl_certificate \"C:/nginx-1.27.3/nginx.crt\";\r\n        ssl_certificate_key \"C:/nginx-1.27.3/nginx.key\";\r\n\r\n        location / {\r\n            proxy_pass http://django;\r\n            proxy_set_header Host $host;\r\n            proxy_set_header X-Real-IP $remote_addr;\r\n            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\r\n            proxy_set_header X-Forwarded-Proto $scheme;\r\n        }\r\n\r\n        location /static/ {\r\n            alias C:\\api\\.venv\\testapi\\static; \r\n        }\r\n    }\r\n\r\nГотово! Пробуем запуститься: start nginx\r\nФайл с процесс айди появляется - ошибок нет. Проверяем наш сервер:\r\n\r\nБерем наш любимый постман и пытаемся обратиться по порту 443 (выключаем проверку сертификата на подлинность по понятным причинам)\r\nРезультат успешный:\r\n![постман на 443.png](%D0%BF%D0%BE%D1%81%D1%82%D0%BC%D0%B0%D0%BD%20%D0%BD%D0%B0%20443.png)\r\n\r\nПробуем постучаться через http. Для этого выключаем авторедирект в настройках и получаем 301 ответ с редиректом:\r\n![постман на HTTP.png](%D0%BF%D0%BE%D1%81%D1%82%D0%BC%D0%B0%D0%BD%20%D0%BD%D0%B0%20HTTP.png)\r\n\r\nПробуем сходить на сервер через наш айпи локалки:\r\n![Второй сервер блок.png](%D0%92%D1%82%D0%BE%D1%80%D0%BE%D0%B9%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%20%D0%B1%D0%BB%D0%BE%D0%BA.png)\r\n\r\nАлиас на джанго не проверить, т.к. он защищает файлы от прямого доступа, но надеюсь по файлику принцип настройки понятен.\r\n\r\nПолный файлик NGINX:\r\n[nginx.conf](nginx.conf)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/LAB1/readme.md b/LAB1/readme.md
+--- a/LAB1/readme.md	(revision 028941f101a0e916f01d1dd5e44701d7e6b8d390)
++++ b/LAB1/readme.md	(date 1734645238687)
+@@ -39,9 +39,9 @@
+ 
+ Добавляем второй сервер блок для обработки второго "доменного имени" на одном сервере (в первом будет локалхост, на втором айпишник локальной сети):
+ 
+-server {
+-listen 443 ssl;
+-server_name 192.168.0.138;
++        server {
++        listen 443 ssl;
++        server_name 192.168.0.138;
+ 
+         ssl_certificate "C:/nginx-1.27.3/nginx.crt";
+         ssl_certificate_key "C:/nginx-1.27.3/nginx.key";
