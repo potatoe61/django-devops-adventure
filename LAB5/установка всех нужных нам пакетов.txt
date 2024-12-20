@@ -1,0 +1,159 @@
+PS C:\Windows\system32> choco install kubernetes-helm -y
+Chocolatey v2.4.1
+Installing the following packages:
+kubernetes-helm
+By installing, you accept licenses for the packages.
+Downloading package from source 'https://community.chocolatey.org/api/v2/'
+
+Progress: Downloading kubernetes-helm 3.16.3... 17%
+Progress: Downloading kubernetes-helm 3.16.3... 52%
+Progress: Downloading kubernetes-helm 3.16.3... 86%
+Progress: Downloading kubernetes-helm 3.16.3... 100%
+
+kubernetes-helm v3.16.3 [Approved]
+kubernetes-helm package files install completed. Performing other installation steps.
+Downloading kubernetes-helm 64 bit
+  from 'https://get.helm.sh/helm-v3.16.3-windows-amd64.zip'
+
+Progress: 0% - Saving 143.52 KB of 16.94 MB
+Progress: 1% - Saving 303.52 KB of 16.94 MB
+Progress: 2% - Saving 463.52 KB of 16.94 MB
+Progress: 3% - Saving 623.52 KB of 16.94 MB
+Progress: 4% - Saving 783.52 KB of 16.94 MB
+Progress: 5% - Saving 943.52 KB of 16.94 MB
+Progress: 6% - Saving 1.08 MB of 16.94 MB
+Progress: 7% - Saving 1.23 MB of 16.94 MB
+Progress: 8% - Saving 1.39 MB of 16.94 MB
+Progress: 9% - Saving 1.55 MB of 16.94 MB
+Progress: 10% - Saving 1.7 MB of 16.94 MB
+Progress: 10% - Saving 1.86 MB of 16.94 MB
+Progress: 11% - Saving 2.02 MB of 16.94 MB
+Progress: 12% - Saving 2.17 MB of 16.94 MB
+Progress: 13% - Saving 2.33 MB of 16.94 MB
+Progress: 14% - Saving 2.48 MB of 16.94 MB
+Progress: 15% - Saving 2.64 MB of 16.94 MB
+Progress: 16% - Saving 2.8 MB of 16.94 MB
+Progress: 17% - Saving 2.95 MB of 16.94 MB
+Progress: 18% - Saving 3.11 MB of 16.94 MB
+Progress: 19% - Saving 3.27 MB of 16.94 MB
+Progress: 20% - Saving 3.42 MB of 16.94 MB
+Progress: 21% - Saving 3.58 MB of 16.94 MB
+Progress: 22% - Saving 3.73 MB of 16.94 MB
+Progress: 22% - Saving 3.89 MB of 16.94 MB
+Progress: 23% - Saving 4.05 MB of 16.94 MB
+Progress: 24% - Saving 4.2 MB of 16.94 MB
+Progress: 25% - Saving 4.36 MB of 16.94 MB
+Progress: 26% - Saving 4.52 MB of 16.94 MB
+Progress: 27% - Saving 4.67 MB of 16.94 MB
+Progress: 28% - Saving 4.83 MB of 16.94 MB
+Progress: 29% - Saving 4.98 MB of 16.94 MB
+Progress: 30% - Saving 5.14 MB of 16.94 MB
+Progress: 31% - Saving 5.3 MB of 16.94 MB
+Progress: 32% - Saving 5.45 MB of 16.94 MB
+Progress: 33% - Saving 5.61 MB of 16.94 MB
+Progress: 34% - Saving 5.77 MB of 16.94 MB
+Progress: 34% - Saving 5.92 MB of 16.94 MB
+Progress: 35% - Saving 6.08 MB of 16.94 MB
+Progress: 36% - Saving 6.23 MB of 16.94 MB
+Progress: 37% - Saving 6.39 MB of 16.94 MB
+Progress: 38% - Saving 6.55 MB of 16.94 MB
+Progress: 39% - Saving 6.7 MB of 16.94 MB
+Progress: 40% - Saving 6.86 MB of 16.94 MB
+Progress: 41% - Saving 7.02 MB of 16.94 MB
+Progress: 42% - Saving 7.17 MB of 16.94 MB
+Progress: 43% - Saving 7.33 MB of 16.94 MB
+Progress: 44% - Saving 7.48 MB of 16.94 MB
+Progress: 45% - Saving 7.64 MB of 16.94 MB
+Progress: 46% - Saving 7.8 MB of 16.94 MB
+Progress: 46% - Saving 7.95 MB of 16.94 MB
+Progress: 47% - Saving 8.11 MB of 16.94 MB
+Progress: 48% - Saving 8.27 MB of 16.94 MB
+Progress: 49% - Saving 8.42 MB of 16.94 MB
+Progress: 50% - Saving 8.58 MB of 16.94 MB
+Progress: 51% - Saving 8.73 MB of 16.94 MB
+Progress: 52% - Saving 8.89 MB of 16.94 MB
+Progress: 53% - Saving 9.05 MB of 16.94 MB
+Progress: 54% - Saving 9.2 MB of 16.94 MB
+Progress: 55% - Saving 9.36 MB of 16.94 MB
+Progress: 56% - Saving 9.52 MB of 16.94 MB
+Progress: 57% - Saving 9.67 MB of 16.94 MB
+Progress: 58% - Saving 9.83 MB of 16.94 MB
+Progress: 58% - Saving 9.98 MB of 16.94 MB
+Progress: 59% - Saving 10.14 MB of 16.94 MB
+Progress: 60% - Saving 10.3 MB of 16.94 MB
+Progress: 61% - Saving 10.45 MB of 16.94 MB
+Progress: 62% - Saving 10.61 MB of 16.94 MB
+Progress: 63% - Saving 10.77 MB of 16.94 MB
+Progress: 64% - Saving 10.92 MB of 16.94 MB
+Progress: 65% - Saving 11.08 MB of 16.94 MB
+Progress: 66% - Saving 11.23 MB of 16.94 MB
+Progress: 67% - Saving 11.39 MB of 16.94 MB
+Progress: 68% - Saving 11.55 MB of 16.94 MB
+Progress: 69% - Saving 11.7 MB of 16.94 MB
+Progress: 69% - Saving 11.86 MB of 16.94 MB
+Progress: 70% - Saving 12.02 MB of 16.94 MB
+Progress: 71% - Saving 12.17 MB of 16.94 MB
+Progress: 72% - Saving 12.33 MB of 16.94 MB
+Progress: 73% - Saving 12.48 MB of 16.94 MB
+Progress: 74% - Saving 12.64 MB of 16.94 MB
+Progress: 75% - Saving 12.8 MB of 16.94 MB
+Progress: 76% - Saving 12.95 MB of 16.94 MB
+Progress: 77% - Saving 13.11 MB of 16.94 MB
+Progress: 78% - Saving 13.27 MB of 16.94 MB
+Progress: 79% - Saving 13.42 MB of 16.94 MB
+Progress: 80% - Saving 13.58 MB of 16.94 MB
+Progress: 81% - Saving 13.73 MB of 16.94 MB
+Progress: 81% - Saving 13.89 MB of 16.94 MB
+Progress: 82% - Saving 14.05 MB of 16.94 MB
+Progress: 83% - Saving 14.2 MB of 16.94 MB
+Progress: 84% - Saving 14.36 MB of 16.94 MB
+Progress: 85% - Saving 14.52 MB of 16.94 MB
+Progress: 86% - Saving 14.67 MB of 16.94 MB
+Progress: 87% - Saving 14.83 MB of 16.94 MB
+Progress: 88% - Saving 14.98 MB of 16.94 MB
+Progress: 89% - Saving 15.14 MB of 16.94 MB
+Progress: 90% - Saving 15.3 MB of 16.94 MB
+Progress: 91% - Saving 15.45 MB of 16.94 MB
+Progress: 92% - Saving 15.61 MB of 16.94 MB
+Progress: 93% - Saving 15.77 MB of 16.94 MB
+Progress: 93% - Saving 15.92 MB of 16.94 MB
+Progress: 94% - Saving 16.06 MB of 16.94 MB
+Progress: 95% - Saving 16.22 MB of 16.94 MB
+Progress: 96% - Saving 16.38 MB of 16.94 MB
+Progress: 97% - Saving 16.53 MB of 16.94 MB
+Progress: 98% - Saving 16.69 MB of 16.94 MB
+Progress: 99% - Saving 16.84 MB of 16.94 MB
+Progress: 100% - Completed download of C:\Users\Dimasique\AppData\Local\Temp\chocolatey\kubernetes-helm\3.16.3\helm-v3.16.3-windows-amd64.zip (16.94 MB).
+Download of helm-v3.16.3-windows-amd64.zip (16.94 MB) completed.
+Hashes match.
+Extracting C:\Users\Dimasique\AppData\Local\Temp\chocolatey\kubernetes-helm\3.16.3\helm-v3.16.3-windows-amd64.zip to C:\ProgramData\chocolatey\lib\kubernetes-helm\tools..
+.
+C:\ProgramData\chocolatey\lib\kubernetes-helm\tools
+ ShimGen has successfully created a shim for helm.exe
+ The install of kubernetes-helm was successful.
+  Deployed to 'C:\ProgramData\chocolatey\lib\kubernetes-helm\tools'
+
+Chocolatey installed 1/1 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+PS C:\Windows\system32> helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" has been added to your repositories
+
+PS C:\Windows\system32> helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "prometheus-community" chart repository
+Update Complete. вЋ€Happy Helming!вЋ€
+
+PS C:\Windows\system32> helm install prometheus prometheus-community/kube-prometheus-stack
+NAME: prometheus
+LAST DEPLOYED: Fri Dec 20 02:53:00 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+kube-prometheus-stack has been installed. Check its status by running:
+  kubectl --namespace default get pods -l "release=prometheus"
+
+Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+PS C:\Windows\system32> 
